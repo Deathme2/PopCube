@@ -12,7 +12,8 @@ namespace PopCube
         static void Main(string[] args)
         {
             var rp = new PopCube();
-            rp.Execute(File.ReadAllBytes(@"C:\Users\Myvar\Google Drive\PopCube\Assembler\bin\Debug\test.pc"));
+            rp.Execute(File.ReadAllBytes(args[0]));
+            rp.SaveState("debug.json");
         }
     }
 }
